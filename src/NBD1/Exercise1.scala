@@ -1,3 +1,5 @@
+package NBD1
+
 object Exercise1 {
   def main(args: Array[String]) {
     val weekDays = List("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
@@ -9,23 +11,23 @@ object Exercise1 {
     getWeekDaysStringWhile(weekDays);
   }
 
-  def getWeekDaysStringFor(weekDays: List[String]) : Unit = {
+  def getWeekDaysStringFor(weekDays: List[String]): Unit = {
     var weekDaysString = ""
     for (day <- weekDays) {
       weekDaysString += day
-      if(day != weekDays.last){
+      if (day != weekDays.last) {
         weekDaysString += ", "
       }
     }
     println(weekDaysString);
   }
 
-  def getWeekDaysStringOnLetter(weekDays: List[String], firstChar: Char) : Unit = {
+  def getWeekDaysStringOnLetter(weekDays: List[String], firstChar: Char): Unit = {
     var weekDaysString = ""
     for (day <- weekDays) {
-      if(day.charAt(0) == firstChar){
+      if (day.charAt(0) == firstChar) {
         weekDaysString += day
-        if(day != weekDays.last){
+        if (day != weekDays.last) {
           weekDaysString += ", "
         }
       }
@@ -33,15 +35,15 @@ object Exercise1 {
     println(weekDaysString);
   }
 
-  def getWeekDaysStringWhile(weekDays: List[String]) : Unit = {
+  def getWeekDaysStringWhile(weekDays: List[String]): Unit = {
     var weekDaysString = ""
     var i = 0
     while (i < weekDays.length) {
       weekDaysString += weekDays(i)
-      if(i < weekDays.length - 1){
+      if (i < weekDays.length - 1) {
         weekDaysString += ", "
       }
-      i+=1
+      i += 1
     }
     println(weekDaysString);
   }

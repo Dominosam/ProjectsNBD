@@ -1,3 +1,5 @@
+package NBD1
+
 import scala.annotation.tailrec
 
 object Exercise3 {
@@ -9,15 +11,16 @@ object Exercise3 {
 
   }
 
-  def getWeekDaysTailRecurrence(weekDays: List[String]): String ={
+  def getWeekDaysTailRecurrence(weekDays: List[String]): String = {
     @tailrec
     def iter(weekDays: List[String], result: String, index: Int): String = {
-      if(index == weekDays.length-1) {
+      if (index == weekDays.length - 1) {
         result + weekDays(index)
       } else {
-        iter(weekDays, (result + weekDays(index) + ", "), index+1)
+        iter(weekDays, (result + weekDays(index) + ", "), index + 1)
       }
     }
+
     return iter(weekDays, "", 0)
   }
 }

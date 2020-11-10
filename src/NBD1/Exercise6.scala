@@ -1,3 +1,5 @@
+package NBD1
+
 object Exercise6 {
   def main(args: Array[String]) {
     // Before black friday
@@ -5,7 +7,7 @@ object Exercise6 {
     printTripleTuple(tripleTuple)
   }
 
-  def printTripleTuple(tuple3:(String, Int, Double)) = {
+  def printTripleTuple(tuple3: (String, Int, Double)) = {
     println(tuple3._1)
     println(tuple3._2)
     println(tuple3._3)

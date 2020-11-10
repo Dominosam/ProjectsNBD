@@ -1,6 +1,8 @@
+package NBD1
+
 object Exercise9 {
   def main(args: Array[String]) {
-    val numbers = List(-2,0,-1,0,1,2,3,0,4,0,5,6,0,7,8,0,0,0,9)
+    val numbers = List(-2, 0, -1, 0, 1, 2, 3, 0, 4, 0, 5, 6, 0, 7, 8, 0, 0, 0, 9)
 
     //Before incrementation
     println(numbers)
@@ -9,6 +11,6 @@ object Exercise9 {
   }
 
   def incrementNumbersListByOne(numbers: List[Int]) = {
-    numbers.map(x => x+1)
+    numbers.map(x => x + 1)
   }
 }

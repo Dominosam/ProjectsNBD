@@ -1,3 +1,5 @@
+package NBD1
+
 object Exercise5 {
   def main(args: Array[String]) {
     // Before black friday
@@ -6,13 +8,13 @@ object Exercise5 {
     printMap(food)
 
     // During black friday
-    val blackFridayFood = food.map({case (a,b) => a -> b * 0.75})
+    val blackFridayFood = food.map({ case (a, b) => a -> b * 0.75 })
     println("During black friday")
     printMap(blackFridayFood)
   }
 
-  def printMap(map: Map[String, Double]): Unit ={
-    map foreach (p => println (p._1 + "-->" + p._2))
+  def printMap(map: Map[String, Double]): Unit = {
+    map foreach (p => println(p._1 + "-->" + p._2))
     println()
   }
 
