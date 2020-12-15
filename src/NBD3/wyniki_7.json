@@ -1,0 +1,62 @@
+{ result: 
+   { n: 123,
+     opTime: { ts: Timestamp(123, 1608049354), t: 3 },
+     electionId: ObjectId("7fffffff0000000000000003"),
+     ok: 1,
+     '$clusterTime': 
+      { clusterTime: Timestamp(123, 1608049354),
+        signature: 
+         { hash: BinData(0, "l7AGwM4RPGEy8zHNKQ4WtArA1Bk="),
+           keyId: NumberLong("6905737538527297539") } },
+     operationTime: Timestamp(123, 1608049354) },
+  connection: 
+   { _events: 
+      { commandStarted: [Function],
+        commandFailed: [Function],
+        commandSucceeded: [Function],
+        clusterTimeReceived: [Function] },
+     _eventsCount: 4,
+     _maxListeners: undefined,
+     id: 1,
+     address: '18.157.246.131:27017',
+     bson: {},
+     socketTimeout: 0,
+     host: 'cluster0-shard-00-01.fmwwh.mongodb.net',
+     port: 27017,
+     monitorCommands: false,
+     closed: false,
+     destroyed: false,
+     lastIsMasterMS: 53 },
+  message: 
+   { parsed: true,
+     raw: <Buffer e6 00 00 00 c3 ef 37 00 de 04 00 00 dd 07 00 00 00 00 00 00 00 d1 00 00 00 10 6e 00 7b 00 00 00 03 6f 70 54 69 6d 65 00 1c 00 00 00 11 74 73 00 7b 00 ... 180 more bytes>,
+     data: <Buffer 00 00 00 00 00 d1 00 00 00 10 6e 00 7b 00 00 00 03 6f 70 54 69 6d 65 00 1c 00 00 00 11 74 73 00 7b 00 00 00 ca e2 d8 5f 12 74 00 03 00 00 00 00 00 00 ... 164 more bytes>,
+     bson: {},
+     opts: 
+      { promoteLongs: true,
+        promoteValues: true,
+        promoteBuffers: false },
+     length: 230,
+     requestId: 3665859,
+     responseTo: 1246,
+     opCode: 2013,
+     fromCompressed: undefined,
+     responseFlags: 0,
+     checksumPresent: false,
+     moreToCome: false,
+     exhaustAllowed: false,
+     promoteLongs: true,
+     promoteValues: true,
+     promoteBuffers: false,
+     documents: 
+      [ { n: 123,
+          opTime: { ts: Timestamp(123, 1608049354), t: 3 },
+          electionId: ObjectId("7fffffff0000000000000003"),
+          ok: 1,
+          '$clusterTime': 
+           { clusterTime: Timestamp(123, 1608049354),
+             signature: 
+              { hash: BinData(0, "l7AGwM4RPGEy8zHNKQ4WtArA1Bk="),
+                keyId: NumberLong("6905737538527297539") } },
+          operationTime: Timestamp(123, 1608049354) } ],
+     index: 214 } }

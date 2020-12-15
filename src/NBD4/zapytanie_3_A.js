@@ -1,0 +1,1 @@
+db.cwiczenia2.aggregate([{$group: {_id: "$job", count: { $sum: 1 }}}]);

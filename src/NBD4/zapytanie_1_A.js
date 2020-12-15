@@ -1,0 +1,1 @@
+db.cwiczenia2.aggregate([{$group: { _id: "$sex", avegrageHeight: {$avg : { $toDouble: "$height" }}, avegrageWeight: {$avg : { $toDouble: "$weight" }}}}])

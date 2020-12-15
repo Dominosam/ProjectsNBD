@@ -1,0 +1,6 @@
+[ { _id: 'Male',
+    avegrageHeight: 166.73636381990713,
+    avegrageWeight: 70.00976377952756 },
+  { _id: 'Female',
+    avegrageHeight: 166.81260913705583,
+    avegrageWeight: 70.11331573604062 } ]
