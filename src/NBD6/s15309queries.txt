@@ -1,0 +1,27 @@
+1. MATCH spDarjeelingSandakphu = shortestPath((start:town{name: "Darjeeling"})-[*]-(end:peak { name:"Sandakphu" }))RETURN spDarjeelingSandakphu
+2.MATCH spDarjeelingSandakphu = shortestPath((start:town{name: "Darjeeling"})-[*]-(end:peak { name:"Sandakphu" }))WHERE all(spDarjeelingSandakphu in relationships(spDarjeelingSandakphu) WHERE spDarjeelingSandakphu.winter = "true") RETURN spDarjeelingSandakphu
+3.Uszereguj trasy którymi można dostać się z Darjeeling na Sandakphu według dystansu:
+a.
+MATCH DarjeelingSandakphuDistances=(start:town {name:"Darjeeling"})-[*]->(end:peak{name:"Sandakphu"}) 
+RETURN reduce(ac=0, relations in relationships(DarjeelingSandakphuDistances) | ac + relations.distance) as distance, DarjeelingSandakphuDistances
+ORDER BY distance
+b.
+MATCH DarjeelingSummerTwoWheeler=(start:town{name:'Darjeeling'})-[r:twowheeler*]->(end)WHERE all(DarjeelingSummerTwoWheeler in relationships(DarjeelingSummerTwoWheeler) WHERE DarjeelingSummerTwoWheeler.summer = "true") return DarjeelingSummerTwoWheeler
+Nie było wyników do tego rozwiązania
+
+4. MATCH (airport:Airport)<-[origin:ORIGIN]-(flight:Flight) return airport, count(origin) as airportCountOrigin order by airportCountOrigin DESC
+5. MATCH (airportLax: Airport { name: 'LAX' })<-[:ORIGIN]-(flight: Flight)-[:DESTINATION]->(airportDest: Airport), (flight)<-[:ASSIGN]-(ticket: Ticket) 
+MATCH (flight)<-[:ASSIGN]-(ticket: Ticket) WITH airportLax, airportDest, flight, ticket
+WHERE ticket.price < 3000 
+RETURN airportDest
+6. MATCH laxDayFlight=(laxAirport:Airport {name:"LAX"})-[r:LOT*]->(dayAirport:Airport {name:"DAY"})
+WITH laxDayFlight, REDUCE(totalPrice = 0, bilet IN r | totalPrice + bilet.cena) AS price
+RETURN laxDayFlight, price ORDER BY price
+Nie było wyników do tego roziwązania
+7.MATCH laxDayFlight=(laxAirport:Airport {name:"LAX"})-[r:LOT*]->(dayAirport:Airport {name:"DAY"})
+WITH laxDayFlight, REDUCE(totalPrice = 0, bilet IN r | totalPrice + bilet.cena) AS price
+RETURN laxDayFlight, price ORDER BY price LIMIT 1
+Nie było wyników do tego rozwiązania
+
+9.MATCH orderUnique=(start:Airport)<-[origin:ORIGIN]-(flight:Flight)-[:DESTINATION]->(end:Airport)
+return start, count(distinct end) order by count(distinct end)
