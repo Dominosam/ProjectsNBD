@@ -1,0 +1,20 @@
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho)
+Date: Tue, 02 Feb 2021 10:46:54 GMT
+Content-Type: application/json
+Content-Length: 0
+
+wywołanie:
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fsZE6wDZpUYZTIkseawM81b23uTLAgA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho)
+Link: </buckets/s15309>; rel="up"
+Last-Modified: Tue, 02 Feb 2021 10:46:54 GMT
+ETag: "WeSznXxkPKXZnCso8srRU"
+Date: Tue, 02 Feb 2021 10:47:18 GMT
+Content-Type: application/json
+Content-Length: 87
+
+{"shortCut": "LIV" , "fullName": "Liverpool" , "country": "England", "hasTitle": false}

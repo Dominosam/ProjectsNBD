@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fsZE83IzMJQaZjAlMuaxMkgt773JlwUA
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho)
+Link: </buckets/s15309>; rel="up"
+Last-Modified: Tue, 02 Feb 2021 10:36:10 GMT
+ETag: "42YFiglVbaIdpsgQtokdBD"
+Date: Tue, 02 Feb 2021 10:39:48 GMT
+Content-Type: application/json
+Content-Length: 87
+
+{"shortCut": "FCB" , "fullName": "FC Barcelona" , "country": "Spain", "valueMln": 2000}

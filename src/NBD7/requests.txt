@@ -1,0 +1,40 @@
+1.
+curl -XPUT -i -H "Content-Type: application/json" -d '{"shortCut": "FCB" , "fullName": "FC Barcelona" , "country": "Spain", "valueMln": 2000}' http://localhost:8098/buckets/s15309/keys/FCB> wynik1.txt
+curl -XPUT -i -H "Content-Type: application/json" -d '{"shortCut": "RMA" , "fullName": "Real Madrid" , "country": "Spain", "valueMln": 3000}' http://localhost:8098/buckets/s15309/keys/RMA> wynik1.txt
+curl -XPUT -i -H "Content-Type: application/json" -d '{"shortCut": "MNU" , "fullName": "Manchester United" , "country": "England", "valueMln": 3000}' http://localhost:8098/buckets/s15309/keys/MNU> wynik1.txt
+curl -XPUT -i -H "Content-Type: application/json" -d '{"shortCut": "MNC" , "fullName": "Manchester City" , "country": "England", "valueMln": 1000}' http://localhost:8098/buckets/s15309/keys/MNC> wynik1.txt
+curl -XPUT -i -H "Content-Type: application/json" -d '{"shortCut": "LIV" , "fullName": "Liverpool" , "country": "England", "valueMln": 800}' http://localhost:8098/buckets/s15309/keys/LIV> wynik1.txt
+
+2.
+curl -i http://localhost:8098/buckets/s15309/keys/LIV > wynik3.txt
+
+3.
+curl -XPUT -i -H "Content-Type: application/json" -d '{"shortCut": "LIV" , "fullName": "Liverpool" , "country": "England", "valueMln": 800 , "hasTitle": true}' http://localhost:8098/buckets/s15309/keys/LIV> wynik3.txt
+curl -i http://localhost:8098/buckets/s15309/keys/LIV > wynik3odp.txt
+
+4.
+curl -XPUT -i -H "Content-Type: application/json" -d '{"shortCut": "LIV" , "fullName": "Liverpool" , "country": "England", "hasTitle": true}' http://localhost:8098/buckets/s15309/keys/LIV> wynik4.txt
+curl -i http://localhost:8098/buckets/s15309/keys/LIV > wynik4odp.txt
+
+
+5.
+curl -XPUT -i -H "Content-Type: application/json" -d '{"shortCut": "LIV" , "fullName": "Liverpool" , "country": "England", "hasTitle": false}' http://localhost:8098/buckets/s15309/keys/LIV> wynik5.txt
+curl -i http://localhost:8098/buckets/s15309/keys/LIV > wynik5odp.txt
+
+6.
+curl -XDELETE -i http://localhost:8098/buckets/s15309/keys/FCB > wynik6.txt
+
+7.
+curl -i http://localhost:8098/buckets/s15309/keys/FCB > wynik7.txt
+
+8.
+curl -i -H "Content-Type: application/json" -d '{"shortCut": "FCP" , "fullName": "FC Porto" , "country": "Portugal", "valueMln": 300}' http://localhost:8098/buckets/s15309/keys> wynik8.txt
+
+9.
+keys check
+curl -i http://localhost:8098/buckets/s15309/keys?keys=true > wynik9.txt
+genKey = "RcdLH8NQsOzlOJcuTHYbhX1jtiF"
+curl -i http://localhost:8098/buckets/s15309/keys/RcdLH8NQsOzlOJcuTHYbhX1jtiF > wynik9.txt
+
+10.
+curl -XDELETE -i http://localhost:8098/buckets/s15309/keys/RcdLH8NQsOzlOJcuTHYbhX1jtiF > wynik10.txt

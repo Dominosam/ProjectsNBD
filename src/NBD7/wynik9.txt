@@ -1,0 +1,22 @@
+HTTP/1.1 200 OK
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho)
+Date: Tue, 02 Feb 2021 10:56:22 GMT
+Content-Type: application/json
+Content-Length: 64
+
+{"keys":["RcdLH8NQsOzlOJcuTHYbhX1jtiF","MNU","RMA","LIV","MNC"]}
+
+
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fsYk1wYxMJQaZjAlMuaxMhxa3XuTLwsA
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho)
+Link: </buckets/s15309>; rel="up"
+Last-Modified: Tue, 02 Feb 2021 10:56:02 GMT
+ETag: "4UDFCjj8D9Sd4z5RCZ5AH0"
+Date: Tue, 02 Feb 2021 10:57:37 GMT
+Content-Type: application/json
+Content-Length: 85
+
+{"shortCut": "FCP" , "fullName": "FC Porto" , "country": "Portugal", "valueMln": 300}
